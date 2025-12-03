@@ -1,0 +1,33 @@
+
+Subsistemas que van a usar API:
+	- Servidores de base de datos
+	- Aplicación del mostrador (usa navegador)
+	- Root que gestiona los mensajes de la baliza
+	
+	
+Tabla de mensajes API/REST que ofrece la base de datos
+
+Método			Recurso				Acción
+
+GET			/pedidos			Muestra la lista de pedidos.
+
+GET 			/pedidos/{id_pedido}		Obtener la baliza asociada a un pedido
+
+POST			/pedidos			Añade nueva pareja pedido-baliza
+
+POST			/asocia				Añade nueva pareja mesa-baliza
+
+DELETE			/pedidos/{id_pedido}		Borrar pedido mal hecho
+ 
+
+Tabla de mensajes API/REST que ofrece la pasarela
+
+Método			Recurso				Acción
+
+POST			/envia				- En el caso de pedido para llevar: Enviar la alerta al baliza. 
+							- Avisar al camarero para que deje la baliza 
+							
+
+POST			/emparejado			Se indica al ordenador que existe una nueva pareja baliza-mesa o baliza-mostrador
+
+
